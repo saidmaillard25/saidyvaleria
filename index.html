@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="//sheetdb.io/api/js"></script>
+</head>
+
+<body>
+  <!-- header design -->
+  <main>
+    <div class="first-bg-image">
+      <div class="title great-vibes-font">
+        <h1>Said<br> <span class="and"> & </span><br> Valeria</h1>
+      </div>
+    </div>
+
+    <!-- 01 Información invitación -->
+    <section class="no-parallax">
+      <div>
+        <img class="leaf-size" src="img/leafs01.png">
+      </div>
+      <div class="flex-container space-top-s">
+        <div>
+          <h2 class="parissiene-font">Con la bendición de Dios y de nuestras familias</h2>
+        </div>
+        <div>
+          <div>
+            <p>¡NOS CASAMOS!</p>
+            <p>Los esperamos para celabrar juntos el día</p>
+          </div>
+          
+          <div>
+            <div class="date"><p>Marzo <span class="day-date ">| 30 |</span> 2024</p></div>
+          </div>
+          <div>
+            <img class="img-copas" src="img/copas.png">
+          </div>
+
+          <div>
+            <div><h2 class="parissiene-font">Quinta Santa Rosa</h2></div>
+            <div>
+              <p class="direction">
+                Carretera Berriozábal - Ocozocoautla Km.4, Cófigo Postal 29130.
+              </p>
+              <div class="date">
+                <p>BODA 6:00pm | EVENTO 8:00pm</p>
+              </div>
+            </div>
+            <div>
+              <P>¿Cómo llegar?</P>
+            </div>
+            <div class="space-top-s">
+              <a class="btn" href="https://maps.app.goo.gl/WThJEerbeL5zjdpKA" target="_blank">
+                <span class="material-symbols-outlined">public</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="leaf-container-02">
+        <img class="leaf-size" src="img/leafs02.png">
+      </div>
+    </section>
+
+      <!-- 02 Vestimenta -->
+    <section class="no-parallax-vest">
+      <div class="flex-container text-light">
+        <div>
+          <h2 class="parissiene-font space-top-s">Vestimenta Formal</h2>
+        </div>
+        <div>
+          <p>¡Considerar que el evento sera de jardín!</p>
+        </div>
+        <div class="vest-container">
+          <img class="img-vest" src="img/vest-duo-nov.png">
+        </div>
+        <div class="date space-bottom-s">
+          <p>Respetuosamente</p>
+          <br>
+          <p>No niños</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="second-bg-image">
+    </div>
+    
+    <!-- 03 Obsequios -->
+    <section class="no-parallax space-bottom-s red">
+      <div class="leaf-container-02">
+        <img class="leaf-size" src="img/leafs03.png">
+      </div>
+      <div class="flex-container">
+        <div>
+          TU PRESENCIA ES NUESTRO MEJOR REGALO, PERO SI DESEAS OBSEQUIARNOS ALGO PUEDES HACERLO DE LAS SIGUIENTES FORMAS:
+        </div>
+        <div class="space-top-s">
+          <a class="btn" id="btn-gitf-open">
+            <span class="material-symbols-outlined">
+              featured_seasonal_and_gifts
+            </span>
+          </a>
+        </div>
+        <div class="space-top-m">
+          <h2 class="parissiene-font">Hemos reservado</h2>
+          <h2 class="parissiene-font">lugares en tu honor.</h2>
+        </div>
+        <div>
+          <p>¡Es muy importante para nosotros que confirmes tu asistencia!</p>
+        </div>
+        <div class="space-top-s">
+          
+          <a class="btn btn-open" id="btn-confirm-open">CONFIRMACIÓN</a>
+        </div>
+
+        <div>
+          <div class="space-top-s">
+            <img class="img-thanks" src="img/love-laurea.png">
+          </div>
+          <div class="space-top-s">
+            <!--Buscar una mejor frase sobre compartir-->
+            <p>Los mejores momentos merecen ser compartidos!</p>
+            <p class="great-vibes-font tanks-text">¡Gracias por acompañarnos!</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+  <section class="footer">
+    <div class="footer-bg-image">
+    </div>
+  </section>
+  </main>
+
+  <dialog id="modal-confirm">
+    <div class="modal-container">
+      <img class="leaf-size_modal" src="img/leafs01.png">
+    
+      <div class="flex-container px-4">
+        <div>
+          <h1 class="great-vibes-font">"Confirmar"</h1>
+          <p class="text-s">Ingresa tu nombre y presiona en buscar.</p>
+        </div>
+        <div>
+          <div action="#">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem">
+              <input type="text" id="fname" name="fname" placeholder="Ingresa tu nombre" class="styled-input">
+            <button class="btn-search" style="height: fit-content;" onclick="onSearch()"><span class="material-symbols-outlined">search</span></button>
+            </div>
+            
+            <br>
+            <label class="text-s">Pases disponibles: </label>
+            <label class="pases-span" id="pass"> 0 </label><br>
+            <!-- TODO: Agregar nuevo label que muestre si esta confirmado -->
+            <input type="number" id="guestId" style="visibility: hidden;"></input>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn-yes" onclick="onConfirm(1)">Sí, ahí estare!</button>
+          <button class="btn-no" id="btn-confirm-close" onclick="onConfirm(0)">No, lo siento!</button>
+        </div>
+        <p class="text-xs"> Es de suma importancia confirmar, debido al número de platillos.</p>
+        <p>¡Gracias por tu sinceridad!</p>
+      </div>
+
+      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
+    </div>
+  </dialog>
+
+  <dialog id="modal-gift">
+    <div class="modal-container">
+      <img class="leaf-size_modal" src="img/leafs01.png">
+    
+      <div class="flex-container px-4">
+       <div>
+        <h1 class="great-vibes-font">"Mesa de regalos"</h1>
+        <p class="text-s">En la fiesta existirá un mesa física y urna, pero si lo prefieres aquí nuestra mesa digital.</p>
+        <button id="btn-gift-close" class="btn"> 
+          <span class="material-symbols-outlined">
+            featured_seasonal_and_gifts
+          </span>
+        </button>
+        <p>¡Agradecemos tu obsequio!</p>
+       </div>
+      </div>
+
+      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
+    </div>
+  </dialog>
+</body>
+<script src="js/modal.js"></script>
+<script src="js/api.js"></script>
+
+</html>
