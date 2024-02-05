@@ -5,8 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Save the date</title>
+  <meta property="og:title" content="Save the Date" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Con la bendición de Dios y de nuestras familias ¡NOS CASAMOS!" />
+  <meta property="og:image" content="https://res.cloudinary.com/doziljknv/image/upload/v1707164965/img_og_meta_xwbfjy.png" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <script src="//sheetdb.io/api/js"></script>
 </head>
 
@@ -33,16 +38,20 @@
             <p>¡NOS CASAMOS!</p>
             <p>Los esperamos para celabrar juntos el día</p>
           </div>
-          
+
           <div>
-            <div class="date"><p>Marzo <span class="day-date ">| 30 |</span> 2024</p></div>
+            <div class="date">
+              <p>Marzo <span class="day-date ">| 30 |</span> 2024</p>
+            </div>
           </div>
           <div>
             <img class="img-copas" src="img/copas.png">
           </div>
 
           <div>
-            <div><h2 class="parissiene-font">Quinta Santa Rosa</h2></div>
+            <div>
+              <h2 class="parissiene-font">Quinta Santa Rosa</h2>
+            </div>
             <div>
               <p class="direction">
                 Carretera Berriozábal - Ocozocoautla Km.4, Código Postal 29130.
@@ -67,7 +76,7 @@
       </div>
     </section>
 
-      <!-- 02 Vestimenta -->
+    <!-- 02 Vestimenta -->
     <section class="no-parallax-vest">
       <div class="flex-container text-light">
         <div>
@@ -86,10 +95,10 @@
         </div>
       </div>
     </section>
-    
+
     <div class="second-bg-image">
     </div>
-    
+
     <!-- 03 Obsequios -->
     <section class="no-parallax space-bottom-s red">
       <div class="leaf-container-02">
@@ -97,13 +106,13 @@
       </div>
       <div class="flex-container">
         <div>
-          TU PRESENCIA ES NUESTRO MEJOR REGALO, PERO SI DESEAS OBSEQUIARNOS ALGO PUEDES HACERLO DE LAS SIGUIENTES FORMAS:
+          TU PRESENCIA ES NUESTRO MEJOR REGALO, PERO SI DESEAS OBSEQUIARNOS ALGO PUEDES HACERLO DE LAS SIGUIENTES
+          FORMAS:
         </div>
         <div class="space-top-s">
-          <a class="btn" id="btn-gitf-open">
-            <span class="material-symbols-outlined">
-              featured_seasonal_and_gifts
-            </span>
+          <a class="btn" id="myBtn2">
+            <!--id="btn-gitf-open"-->
+            Mesa de Regalos
           </a>
         </div>
         <div class="space-top-m">
@@ -129,30 +138,71 @@
           </div>
         </div>
       </div>
-      
+
     </section>
 
-  <section class="footer">
-    <div class="footer-bg-image">
-    </div>
-  </section>
+    <section class="footer">
+      <div class="footer-bg-image">
+      </div>
+    </section>
   </main>
+
+  <div id="myModal2" class="modal">
+    <div class="modal-content">
+      <img class="leaf-size_modal" src="img/leafs01.png">
+      <div>
+        <div>
+          <h1 class="great-vibes-font text-m">"Consulta pases"</h1>
+          <p class="text-s">Ingresa tu nombre y presiona en buscar.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div action="#">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem">
+              <input type="text" id="fname" name="fname" placeholder="Ingresa tu nombre" class="styled-input">
+              <button class="btn-search" style="height: fit-content;" onclick="onSearch()"><span
+                  class="material-symbols-outlined">search</span></button>
+            </div>
+            <br>
+            <div style="align-items: center;">
+              <label class="text-s">Pases disponibles: </label>
+              <label class="pases-span" id="pass"> 0 </label><br>
+              <input type="number" id="guestId" style="visibility: hidden;"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="btn-container">
+          <button class="btn-yes close" id="btn-confirm-close">Enterado, gracias!</button>
+        </div>
+        <p class="text-xs"> Recibiran una llamada para confirmar su asistencia, debido al número de platillos.</p>
+        <p class="text-s">¡Gracias por tu sinceridad!</p>
+      </div>
+      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
+    </div>
+  </div>
 
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Título del Modaling</h2>
+      <img class="leaf-size_modal" src="img/leafs01.png">
+      <div class="flex-container px-4">
+        <div>
+          <h1 class="great-vibes-font">"Mesa de regalos"</h1>
+          <p class="text-s space-top-s">"Gracias por tanto amor hacia nosotros."</p>
+          <br>
+          <button id="btn-gift-close" class="btn-liverpool">
+            MESA LIVERPOOL
+          </button>
+          <div class="space-top-s">
+            <p>¡Agradecemos tu obsequio!</p>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Contenido del modal</p>
-        <p id="countdown"></p>
-      </div>
-      <div class="modal-footer">
-        <button id="btn1" style="display:none;">Botón 1</button>
-        <button id="btn2" style="display:none;">Botón 2</button>
-      </div>
+      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
     </div>
+  </div>
   <!--
   <dialog id="modal-confirm">
     <div class="modal-container">
