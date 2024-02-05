@@ -236,6 +236,16 @@ main
   text-decoration: none;
 }
 
+.btn-liverpool {
+  border: 3px solid #E10098;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer; 
+  background-color: #EA4DB7;
+  text-decoration: none;
+}
+
 .btn-pas {
   border: 3px solid rgb(192, 114, 46);
   border-radius: 5px;
