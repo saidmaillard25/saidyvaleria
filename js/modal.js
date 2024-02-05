@@ -5,6 +5,8 @@ const btnConfirmClose = document.getElementById('btn-confirm-close')
 const modalGift = document.getElementById("myModal2");
 const btonGiftModal = document.getElementById("myBtn2");
 const btnGiftClose = document.getElementById('btn-gift-close')
+const btnCloseM1 = document.getElementById('btn-close-m1')
+const btnCloseM2 = document.getElementById('btn-close-m2')
 
 const restarConfirmForm = () => {
     document.getElementById("fname").value = ''
@@ -26,6 +28,14 @@ btonGiftModal.onclick = function() {
 
 btnGiftClose.onclick = function() {
     modalGift.style.display = "none";
+}
+
+btnCloseM2.onclick = function() {
+    modalGift.style.display = "none";
+}
+
+btnCloseM1.onclick = function() {
+    confirmModal.style.display = "none";
 }
 
 window.onclick = function(event) {
