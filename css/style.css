@@ -205,6 +205,10 @@ main
   margin-bottom: 2rem;
 }
 
+.space-padding-m {
+  padding-top: 4rem;
+}
+
 .text-s {
   font-size: 1rem;
   text-align: center;
@@ -236,7 +240,7 @@ main
   border: 3px solid rgb(192, 114, 46);
   border-radius: 5px;
   color: white;
-  padding: 20px 28px 10px 28px;
+  padding: 20px 28px 20px 28px;
   cursor: pointer; 
   background-color: var(--button-color);
   text-decoration: none;
@@ -249,16 +253,6 @@ main
   padding: 10px 20px 10px 20px;
   cursor: pointer; 
   background-color: #EA4DB7;
-  text-decoration: none;
-}
-
-.btn-pas {
-  border: 3px solid rgb(192, 114, 46);
-  border-radius: 5px;
-  color: white;
-  padding: 20px 28px 20px 28px;
-  cursor: pointer; 
-  background-color: var(--button-color);
   text-decoration: none;
 }
 
@@ -303,6 +297,13 @@ main
 
 .leaf-size_modal {
   width: 7rem;
+}
+
+.leaf-size_modal_u {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content:  flex-start;
 }
 
 .leaf-container-02 {
@@ -402,9 +403,16 @@ input[type="text"]:focus {
 .modal-content {
   background-color: var(--bg-color);
   margin: 15% auto;
-  padding: 20px;
   border: none !important;
   width: 80%;
   border-radius: 1rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.guest_not-found {
+  color: #d42744;
+  font-size: 1.3rem;
+  visibility: hidden;
+  text-align: center;
+  align-items: center;
 }

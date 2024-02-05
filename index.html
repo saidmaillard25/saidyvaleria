@@ -65,7 +65,7 @@
             </div>
             <div class="space-top-s">
               <a class="btn" href="https://maps.app.goo.gl/WThJEerbeL5zjdpKA" target="_blank">
-                <span class="material-symbols-outlined">public</span>
+                ¡Te ayudo a llegar!
               </a>
             </div>
           </div>
@@ -123,7 +123,7 @@
           <p>¡Es muy importante para nosotros que confirmes tu asistencia!</p>
         </div>
         <div class="space-top-s">
-          <a class="btn-pas btn-open" id="myBtn">¡Consulta tus pases!</a>
+          <a class="btn btn-open" id="myBtn">¡Consulta tus pases!</a>
           <!-- id="btn-confirm-open"-->
         </div>
 
@@ -147,10 +147,10 @@
     </section>
   </main>
 
-  <div id="myModal2" class="modal">
+  <div id="myModal" class="modal">
     <div class="modal-content">
-      <img class="leaf-size_modal" src="img/leafs01.png">
-      <div>
+      <img class="leaf-size_modal leaf-size_modal_u" src="img/leafs01.png" style="border-radius: 1rem;">
+      <div class="space-padding-m">
         <div>
           <h1 class="great-vibes-font text-m">"Consulta pases"</h1>
           <p class="text-s">Ingresa tu nombre y presiona en buscar.</p>
@@ -165,94 +165,49 @@
                   class="material-symbols-outlined">search</span></button>
             </div>
             <br>
-            <div style="align-items: center;">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
               <label class="text-s">Pases disponibles: </label>
               <label class="pases-span" id="pass"> 0 </label><br>
-              <input type="number" id="guestId" style="visibility: hidden;"></input>
+              <label id="not-found" class="guest_not-found">¡Invitado no encontrado!</label>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div class="btn-container">
+        <div class="btn-container" style="display: flex; justify-content: center; align-items: center;">
           <button class="btn-yes close" id="btn-confirm-close">Enterado, gracias!</button>
         </div>
         <p class="text-xs"> Recibiran una llamada para confirmar su asistencia, debido al número de platillos.</p>
         <p class="text-s">¡Gracias por tu sinceridad!</p>
       </div>
-      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
+      <div class="leaf-container-02">
+        <img class="leaf-size_modal" src="img/leafs02.png" style="border-radius: 1rem;" >
+      </div>
     </div>
   </div>
 
-  <div id="myModal" class="modal">
+  <div id="myModal2" class="modal">
     <div class="modal-content">
-      <img class="leaf-size_modal" src="img/leafs01.png">
+      <img class="leaf-size_modal" src="img/leafs01.png" style="border-radius: 1rem;">
       <div class="flex-container px-4">
         <div>
           <h1 class="great-vibes-font">"Mesa de regalos"</h1>
           <p class="text-s space-top-s">"Gracias por tanto amor hacia nosotros."</p>
           <br>
-          <button id="btn-gift-close" class="btn-liverpool">
+          <a id="btn-gift-close" class="btn-liverpool" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51285915?_ga=2.113171905.497832963.1707164392-1479444465.1705802976" target="_blank" >
             MESA LIVERPOOL
-          </button>
+          </a>
           <div class="space-top-s">
             <p>¡Agradecemos tu obsequio!</p>
           </div>
         </div>
       </div>
-      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
+      
+      <div class="leaf-container-02">
+         <img class="leaf-size_modal" src="img/leafs02.png" style="border-radius: 1rem;">
+      </div>
     </div>
   </div>
-  <!--
-  <dialog id="modal-confirm">
-    <div class="modal-container">
-      <img class="leaf-size_modal" src="img/leafs01.png">
-      <div class="flex-container px-4">
-        <div>
-          <h1 class="great-vibes-font">"Consulta pases"</h1>
-          <p class="text-s">Ingresa tu nombre y presiona en buscar.</p>
-        </div>
-        <div>
-          <div action="#">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem">
-              <input type="text" id="fname" name="fname" placeholder="Ingresa tu nombre" class="styled-input">
-            <button class="btn-search" style="height: fit-content;" onclick="onSearch()"><span class="material-symbols-outlined">search</span></button>
-            </div>
-            <br>
-            <label class="text-s">Pases disponibles: </label>
-            <label class="pases-span" id="pass"> 0 </label><br>
-            <input type="number" id="guestId" style="visibility: hidden;"></input>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button class="btn-yes" id="btn-confirm-close">Enterado, gracias!</button>
-        </div>
-        <p class="text-xs"> Recibiran una llamada para confirmar su asistencia, debido al número de platillos.</p>
-        <p class="text-s">¡Gracias por tu sinceridad!</p>
-      </div> 
-      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
-    </div>
-  </dialog>
-
-  <dialog id="modal-gift">
-    <div class="modal-container">
-      <img class="leaf-size_modal" src="img/leafs01.png">
-      <div class="flex-container px-4">
-       <div>
-        <h1 class="great-vibes-font">"Mesa de regalos"</h1>
-        <p class="text-s space-top-s">"Gracias por tanto amor hacia nosotros."</p>
-        <br>
-        <button id="btn-gift-close" class="btn-liverpool"> 
-          MESA LIVERPOOL
-        </button>
-        <div class="space-top-s">
-          <p>¡Agradecemos tu obsequio!</p>
-        </div>
-       </div>
-      </div>
-      <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
-    </div>
-  </dialog> -->
 </body>
 <script src="js/modal.js"></script>
 <script src="js/api.js"></script>
