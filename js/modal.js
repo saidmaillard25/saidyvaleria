@@ -6,12 +6,18 @@ const modalGift = document.getElementById("myModal2");
 const btonGiftModal = document.getElementById("myBtn2");
 const btnGiftClose = document.getElementById('btn-gift-close')
 
+const restarConfirmForm = () => {
+    document.getElementById("fname").value = ''
+    document.getElementById('pass').textContent = '0'
+}
+
 btnConfirmModal.onclick = function() {
     confirmModal.style.display = "block";
 }
 
 btnConfirmClose.onclick = function() {
     confirmModal.style.display = "none";
+    restarConfirmForm();
 }
 
 btonGiftModal.onclick = function() {
@@ -29,5 +35,7 @@ window.onclick = function(event) {
 
     if (event.target == confirmModal) {
         confirmModal.style.display = "none";
+        restarConfirmForm();
     }
 }
+

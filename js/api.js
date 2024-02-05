@@ -7,13 +7,16 @@ const normalize = (str) => {
   return removeAccents(key)
 }
 
+const apiURL = 'https://sheetdb.io/api/v1/to3oeys9kfrh0'
 
 const onSearch = () => {
+  document.getElementById('pass').textContent = 'Buscando tus pases...';
+  
   const name = document.getElementById("fname").value;
   if(name && name.trim().length == 0) return;
 
   const key = normalize(name);
-  SheetDB.read('https://sheetdb.io/api/v1/s1wnt6ogflbhd', { search: { Nombre:  key} }).then(function(result){
+  SheetDB.read(apiURL, { search: { Nombre:  key} }).then(function(result){
     console.log(result);
 
     if(result && result.length === 1) {
@@ -24,13 +27,12 @@ const onSearch = () => {
       } 
       else {
         document.getElementById('pass').textContent = Pases
-        document.getElementById('guestId').value = Id
       }
     } else if(result && result.length > 0 ){
       document.getElementById('pass').textContent = 'Ingresa tu nombre y apellido!'
     } 
     else {
-      document.getElementById('pass').textContent = 'No te encontramos'
+      document.getElementById('pass').textContent = 'Invitado no encontrado'
     }
 
   }, function(error){
@@ -41,7 +43,7 @@ const onSearch = () => {
 const onConfirm = (confirm) => {
   const id = document.getElementById('guestId').value
   if (id) {
-    fetch(`https://sheetdb.io/api/v1/s1wnt6ogflbhd/Id/${id}`, {
+    fetch(`${apiURL}/Id/${id}`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
