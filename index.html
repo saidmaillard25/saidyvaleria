@@ -114,8 +114,8 @@
           <p>¡Es muy importante para nosotros que confirmes tu asistencia!</p>
         </div>
         <div class="space-top-s">
-          
-          <a class="btn-pas btn-open" id="btn-confirm-open">¡Consulta tus pases!</a>
+          <a class="btn-pas btn-open" id="myBtn">¡Consulta tus pases!</a>
+          <!-- id="btn-confirm-open"-->
         </div>
 
         <div class="space-top-m">
@@ -137,12 +137,26 @@
     </div>
   </section>
   </main>
-  
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Título del Modaling</h2>
+      </div>
+      <div class="modal-body">
+        <p>Contenido del modal</p>
+        <p id="countdown"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn1" style="display:none;">Botón 1</button>
+        <button id="btn2" style="display:none;">Botón 2</button>
+      </div>
+    </div>
+  <!--
   <dialog id="modal-confirm">
     <div class="modal-container">
       <img class="leaf-size_modal" src="img/leafs01.png">
-      
-      
       <div class="flex-container px-4">
         <div>
           <h1 class="great-vibes-font">"Consulta pases"</h1>
@@ -154,11 +168,9 @@
               <input type="text" id="fname" name="fname" placeholder="Ingresa tu nombre" class="styled-input">
             <button class="btn-search" style="height: fit-content;" onclick="onSearch()"><span class="material-symbols-outlined">search</span></button>
             </div>
-            
             <br>
             <label class="text-s">Pases disponibles: </label>
             <label class="pases-span" id="pass"> 0 </label><br>
-             
             <input type="number" id="guestId" style="visibility: hidden;"></input>
           </div>
         </div>
@@ -168,16 +180,13 @@
         <p class="text-xs"> Recibiran una llamada para confirmar su asistencia, debido al número de platillos.</p>
         <p class="text-s">¡Gracias por tu sinceridad!</p>
       </div> 
-
       <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
     </div>
   </dialog>
-  
 
   <dialog id="modal-gift">
     <div class="modal-container">
       <img class="leaf-size_modal" src="img/leafs01.png">
-    
       <div class="flex-container px-4">
        <div>
         <h1 class="great-vibes-font">"Mesa de regalos"</h1>
@@ -191,10 +200,9 @@
         </div>
        </div>
       </div>
-
       <img class="leaf-size_modal" src="img/leafs02.png" style="align-self: flex-end;">
     </div>
-  </dialog>
+  </dialog> -->
 </body>
 <script src="js/modal.js"></script>
 <script src="js/api.js"></script>

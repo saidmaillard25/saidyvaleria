@@ -1,17 +1,33 @@
-const buildModal = (modalId, btnId, btnCloseId) => {
-  const modal = document.querySelector(modalId);
-  const btn = document.querySelector(btnId);
-  const btnClose = document.querySelector(btnCloseId);
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+var countdown = document.getElementById("countdown");
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
 
-  btn.addEventListener("click", () => {
-    modal.showModal();
-  });
+btn.onclick = function() {
+    modal.style.display = "block";
+    var timeleft = 10;
 
-  btnClose.addEventListener("click", () => {
-    modal.close();
-  });
+    var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            countdown.innerHTML = "";
+            btn1.style.display = "inline-block";
+            btn2.style.display = "inline-block";
+        } else {
+            countdown.innerHTML = timeleft + " segundos restantes";
+        }
+        timeleft -=1 ;
+    },1000);
 }
 
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-buildModal('#modal-confirm', "#btn-confirm-open", "#btn-confirm-close")
-buildModal('#modal-gift', "#btn-gitf-open", "#btn-gift-close")
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
