@@ -405,3 +405,25 @@ input[type="text"]:focus {
   display: flex;
   justify-content: space-between;
 }
+
+/* Modal regalos */
+.cont-event-gift {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-gift {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-gift {
+  width: 2.8rem;
+}
+
+.img-mn {
+  width: 2rem;
+}
